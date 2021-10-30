@@ -1,11 +1,10 @@
-import logo from "./logo.svg"
 import "./App.css"
-import { Button } from "./components/button"
+import { ButtonTray } from "./components/ButtonTray"
 
 function App() {
   return (
     <div className="App">
-      <Button></Button>
+      <ButtonTray />
     </div>
   )
 }

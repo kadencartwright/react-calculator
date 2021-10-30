@@ -10,12 +10,14 @@ export type StyledButtonProps = {
 const colorMap = {
   lightGray: { notPressed: "#5B5A5E", pressed: "#9D9D9E" },
   darkGray: { notPressed: "#383B40", pressed: "#5B5A5E" },
-  orange: { notPressed: "#FF9D0A", pressed: "#C97C00" },
+  orange: { notPressed: "#FFA00A", pressed: "#C97C00" },
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
   width: 100%;
   height: 100%;
+  color: white;
+  font-size: 2rem;
   background-color: ${({ color }) => colorMap[color || "lightGray"].notPressed};
   border: none;
   &.pressed {
