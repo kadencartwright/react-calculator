@@ -11,7 +11,7 @@ export const ButtonTray: React.FC<ButtonTrayProps> = (props) => {
   return (
     <ButtonTrayWrapper>
       {buttons.map(({ color, value, gridArea, type }) => (
-        <div key={value} style={{ gridArea, height: "100px" }}>
+        <div key={value} style={{ gridArea, height: "100%" }}>
           <Button
             value={value}
             color={color}

@@ -6,7 +6,7 @@ export const ButtonTrayWrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2px;
   width: 400px;
-  height: 500px;
+  height: 520px;
   grid-template-areas:
     "AC plusMinus percent divide"
     "seven eight nine multiply"
