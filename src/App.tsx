@@ -1,11 +1,9 @@
 import "./App.css"
-import { ButtonTray } from "./components/ButtonTray"
-import { DisplayScreen } from "./components/displayScreen"
+import Calculator from "./components/calculator"
 function App() {
   return (
     <div className="App">
-      <DisplayScreen />
-      <ButtonTray />
+      <Calculator />
     </div>
   )
 }

@@ -1,16 +1,24 @@
 import React from "react"
 import { ButtonTrayWrapper } from "./styles"
-import buttons from "./buttonDefinitions"
+import buttons, { ButtonValue } from "./buttonDefinitions"
 import { Button } from "../button"
+import { ButtonTrayOnClickFunction } from "../calculator"
 
-export type ButtonTrayProps = {}
+export type ButtonTrayProps = {
+  onClick: (onClickProps: ButtonTrayOnClickFunction) => void
+}
 export const ButtonTray: React.FC<ButtonTrayProps> = (props) => {
   return (
     <ButtonTrayWrapper>
-      {buttons.map(({ color, value, gridArea }) => (
+      {buttons.map(({ color, value, gridArea, type }) => (
         <div key={value} style={{ gridArea, height: "100px" }}>
-          {console.log({ color, value })}
-          <Button color={color}>{value}</Button>
+          <Button
+            value={value}
+            color={color}
+            onClick={() => props.onClick({ type, value: value as ButtonValue })}
+          >
+            {value}
+          </Button>
         </div>
       ))}
     </ButtonTrayWrapper>
